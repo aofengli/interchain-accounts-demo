@@ -5,6 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
+	"github.com/irisnet/irismod/modules/mt"
+
 	"github.com/cosmos/cosmos-sdk/client"
 	"github.com/cosmos/cosmos-sdk/codec/types"
 	"github.com/spf13/cast"
@@ -99,6 +101,8 @@ import (
 	appparams "github.com/cosmos/interchain-accounts/app/params"
 	tmjson "github.com/tendermint/tendermint/libs/json"
 
+	nftmodule "github.com/irisnet/irismod/modules/nft/module"
+
 	// this line is used by starport scaffolding # stargate/app/moduleImport
 	intertx "github.com/cosmos/interchain-accounts/x/inter-tx"
 	intertxkeeper "github.com/cosmos/interchain-accounts/x/inter-tx/keeper"
@@ -154,6 +158,9 @@ var (
 		vesting.AppModuleBasic{},
 		ica.AppModuleBasic{},
 		intertx.AppModuleBasic{},
+
+		nftmodule.AppModuleBasic{},
+		mt.AppModuleBasic{},
 
 		// this line is used by starport scaffolding # stargate/app/moduleBasic
 	)
