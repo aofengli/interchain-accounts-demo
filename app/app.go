@@ -5,6 +5,8 @@ import (
 	"os"
 	"path/filepath"
 
+	authz "github.com/cosmos/cosmos-sdk/x/authz/module"
+
 	"github.com/irisnet/irismod/modules/mt"
 
 	"github.com/cosmos/cosmos-sdk/client"
@@ -161,6 +163,7 @@ var (
 
 		nftmodule.AppModuleBasic{},
 		mt.AppModuleBasic{},
+		authz.AppModuleBasic{},
 
 		// this line is used by starport scaffolding # stargate/app/moduleBasic
 	)
